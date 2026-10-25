@@ -93,12 +93,12 @@ header img {
   .greeting-area {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 0px;
     padding: 20px;
   }
 
   .greeting-area img {
-    width: 40%;
+    width: 30%;
     max-width: 160px;
   }
 
