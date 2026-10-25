@@ -97,14 +97,14 @@ header img {
     padding: 20px;
   }
 
-@media (max-width: 600px) {
   .greeting-area img {
     width: 30%;
     max-width: 160px;
-    height: auto;          /* ← 追加:縦横比を保つ */
-    object-fit: contain;   /* ← 追加:念のため、画像を伸ばさず全体を表示する */
+    height: auto;
+    flex: none;            /* ← 追加:縦方向に伸び縮みさせない */
+    align-self: flex-start;/* ← 追加:左上に固定し、伸ばさない */
+    object-fit: contain;
   }
-}
 
   .body {
     font-size: 16px;
