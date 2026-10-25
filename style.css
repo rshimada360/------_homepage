@@ -1,23 +1,108 @@
-.body {
-  font-size: 20px ;
+/* ===== 全体 ===== */
+body {
+  margin: 0;
   font-family: "Klee One", serif;
-  text-align: center;
   color: #6b5248;
 }
-.greeting {
-  font-size: 40px;
-  font-family: "Shippori Mincho", serif;
-  text-align: center;
-  margin: 30px 60px;
-}
-img {
+
+/* ===== ヘッダー画像 ===== */
+header img {
+  display: block;
   width: 100%;
   height: auto;
 }
+
+/* ===== 挿絵(左)と文章(右)のエリア ===== */
+.greeting-area {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9ece0;
+}
+
+.greeting-area img {
+  width: 25%;
+  max-width: 250px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.greeting-text {
+  flex: 1;
+}
+
+.body {
+  font-size: 20px;
+  line-height: 2;
+  letter-spacing: 0.05em;
+  text-align: left;
+  margin: 0;
+}
+
+/* ===== 注文リンクエリア ===== */
+.infomation-area {
+  padding: 40px 20px;
+  background-color: #f9ece0;
+  text-align: center;          /* ← 文字を中央ぞろえにする */
+}
+
+.header-text {
+  font-family: "Shippori Mincho", serif;
+  font-size: 28px;
+}
+
+.header-text p {
+  margin: 0 0 16px;
+}
+
+.infomation-body {
+  line-height: 2;
+}
+
+.infomation-body p {
+  margin: 0 0 12px;
+}
+
+/* ===== リンクを枠で飾る ===== */
+.infomation-body a {
+  display: inline-block;       /* 枠や余白が付けられるようにする */
+  min-width: 220px;            /* 3つのリンクの幅をそろえる */
+  margin: 6px 0;
+  padding: 8px 24px;
+  color: #6b5248;
+  text-decoration: none;       /* 下線を消す */
+  border: 1px solid #6b5248;   /* 枠線 */
+  border-radius: 24px;         /* 角を丸くする */
+  line-height: 1.6;
+  transition: background-color 0.3s;
+}
+
+.infomation-body a:hover {
+  background-color: #fff;      /* マウスを乗せると背景が白くなる */
+}
+
+/* ===== スマホ(画面幅600px以下) ===== */
 @media (max-width: 600px) {
   header img {
     height: 300px;
     object-fit: cover;
     object-position: center;
+  }
+
+  .greeting-area {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .greeting-area img {
+    width: 40%;
+    max-width: 160px;
+  }
+
+  .body {
+    font-size: 16px;
   }
 }
